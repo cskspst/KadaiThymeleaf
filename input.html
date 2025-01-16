@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial of Thymeleaf</title>
+</head>
+<body>
+    <h1 th:text="#{kadai.common.content.title}"></h1>
+    <h2 th:text="#{kadai.input.content.subtitle}"></h2>
+    <p th:text="#{kadai.input.content.message}"></p>
+    <!--*/ ${previous} != null → previousがnullでない → パラメータにpreviousが指定されている */-->
+    <p th:if="${previous} != null" th:text="'前回入力された値は「' + ${previous} + '」でした。'"></p>
+    <form method="post" action="/output">
+        <input type="text" name="val">
+        <button type="submit">送信</button>
+    </form>
+</body>
+</html>
