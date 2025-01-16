@@ -5,10 +5,10 @@
     <title>Tutorial of Thymeleaf</title>
 </head>
 <body>
-    <h1 th:text="#{kadai.common.content.title}"></h1>
-    <h2 th:text="#{kadai.output.content.subtitle}"></h2>
+    <h1 th:text="#{kadai.common.title}"></h1>
+    <h2 th:text="#{kadai.output.subtitle}"></h2>
     <p th:text="'入力された値は「' + ${val} + '」です。'"></p>
     <!--/* コントローラから受け取った val を previous にセットし、パラメータ付きのリンクとして生成する */-->
-    <p><a th:href="@{/input(previous=${val})}">入力画面へ戻る</a></p>
+    <p><a th:href="@{/input(previous=${val})}" th:text="#{kadai.output.link}"></a></p>
 </body>
 </html>
