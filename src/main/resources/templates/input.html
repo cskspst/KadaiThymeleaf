@@ -7,8 +7,8 @@
 <body>
     <h1 th:text="#{kadai.common.content.title}"></h1>
     <h2 th:text="#{kadai.input.content.subtitle}"></h2>
-    <p>値を入力してください。</p>
-    <!-- ${previous} != null → previousがnullでない → パラメータにpreviousが指定されている -->
+    <p th:text="#{kadai.input.content.message}"></p>
+    <!--*/ ${previous} != null → previousがnullでない → パラメータにpreviousが指定されている */-->
     <p th:if="${previous} != null" th:text="'前回入力された値は「' + ${previous} + '」でした。'"></p>
     <form method="post" action="/output">
         <input type="text" name="val">
